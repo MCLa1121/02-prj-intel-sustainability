@@ -71,6 +71,9 @@ body {
   object-fit: cover;
   border-radius: 14px;
   margin-bottom: 15px;
+
+  /* Added transition so the image zooms smoothly */
+  transition: transform 0.35s ease, filter 0.35s ease;
 }
 
 /* Year style inside each card */
@@ -87,14 +90,35 @@ body {
 }
 /* CARD HOVER EFFECT.*/
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0, 104, 181, 0.25);
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0 14px 30px rgba(0, 104, 181, 0.28);
+  border-top-color: #00a3e0;
 }
 
 /* Shows the hidden paragraph when hovering over the card */
+.card p {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+
+  /* Added smoother reveal transition */
+  transition: 
+    opacity 0.35s ease,
+    max-height 0.45s ease,
+    margin-top 0.35s ease;
+
+  margin-top: 0;
+}
+
 .card:hover p {
   opacity: 1;
   max-height: 220px;
+  margin-top: 10px;
+}
+
+.card:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
 }
 
 footer {
