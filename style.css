@@ -80,4 +80,65 @@ body {
   font-size: 1.2rem;
   margin-bottom: 12px;
 }
+/* CARD HOVER EFFECT.*/
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 104, 181, 0.25);
+}
+
+/* Shows the hidden paragraph when hovering over the card */
+.card:hover p {
+  opacity: 1;
+  max-height: 220px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e6f2fb;
+  color: #0068b5;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  /* Makes the hero section smaller on mobile */
+  .hero {
+    padding: 50px 18px;
+  }
+
+  /* Makes the main title smaller on mobile */
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Makes the intro paragraph easier to read on mobile */
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Changes timeline from horizontal row to vertical column */
+  .timeline {
+    flex-direction: column;
+    overflow-x: visible;
+    padding: 25px 18px;
+  }
+
+  /* Makes each card take the full width on mobile */
+  .card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  /* Shows details automatically on mobile because hover is harder on phones */
+  .card p {
+    opacity: 1;
+    max-height: none;
+  }
+
+  /* Removes hover movement on mobile to keep the layout stable */
+  .card:hover {
+    transform: none;
+  }
+}
 
