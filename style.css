@@ -59,6 +59,11 @@ body {
   scroll-snap-align: start;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-top: 6px solid #0068b5;
+  /* Added transition for smooth hover animation */
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-top-color 0.35s ease;
 }
 .card img {
   width: 100%;
@@ -99,7 +104,7 @@ footer {
   color: #0068b5;
   font-weight: bold;
 }
-
+/* Responsive styles for mobile devices */
 @media (max-width: 768px) {
 
   /* Makes the hero section smaller on mobile */
