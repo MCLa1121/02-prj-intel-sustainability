@@ -16,4 +16,29 @@ body {
   text-align: center;
   padding: 70px 20px;
 }
+/* Keeps the hero text from becoming too wide */
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Controls the Intel logo size and spacing */
+.intel-logo {
+  width: 130px;
+  margin-bottom: 25px;
+}
+
+/* Main hero heading */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 18px;
+}
+
+/* Hero paragraph under the title */
+.hero p {
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
 
